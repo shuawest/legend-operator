@@ -1,3 +1,5 @@
 
+# ignore environment specific variables and secrets
+.env
 
-.env-ocp
+
