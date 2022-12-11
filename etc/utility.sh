@@ -20,14 +20,12 @@ genOperatorInit() {
 genApis() {
     checkOperatorSDK
     pushd ${OPERATOR_SRC}
-    
-    #operator-sdk create api --group cache --version v1alpha1 --kind Memcached --resource --controller
-    
-    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Studio --resource --controller
-    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Query --resource --controller
-    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Engine --resource --controller
-    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind SDLC --resource --controller
-    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Store --resource --controller
+
+    operator-sdk create api --version ${OPAPI_VERSION} --kind Studio --resource --controller
+    operator-sdk create api --version ${OPAPI_VERSION} --kind Query --resource --controller
+    operator-sdk create api --version ${OPAPI_VERSION} --kind Engine --resource --controller
+    operator-sdk create api --version ${OPAPI_VERSION} --kind Sdlc --resource --controller
+    operator-sdk create api --version ${OPAPI_VERSION} --kind Store --resource --controller
 
     popd
 }
