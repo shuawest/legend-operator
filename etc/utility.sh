@@ -11,13 +11,23 @@
 genOperatorInit() {
     checkOperatorSDK
     pushd ${OPERATOR_SRC}
+    
     operator-sdk init --domain ${DOMAIN} --repo ${GOREPO} --project-version=${SDK_PROJECT_VERSION} 
+    
     popd
 }
 
 genApis() {
     checkOperatorSDK
     pushd ${OPERATOR_SRC}
+    
+    #operator-sdk create api --group cache --version v1alpha1 --kind Memcached --resource --controller
+    
+    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Studio --resource --controller
+    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Query --resource --controller
+    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Engine --resource --controller
+    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind SDLC --resource --controller
+    operator-sdk create api --group legend --version ${OPAPI_VERSION} --kind Store --resource --controller
 
     popd
 }
