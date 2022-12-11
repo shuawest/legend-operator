@@ -5,14 +5,15 @@
 export OPERATOR_NAME=legend-operator
 export OPERATOR_SRC=/workspaces/legend-operator/src
 
-export VERSION=0.0.1
+export OPERATOR_VERSION=v0.0.1
 
 export DOMAIN=org.finos.legend
 export NAME="finos-legend"
-export GOREPO=github.com/shuawest/legend-operator
+export GOREPO=github.com/finos/legend-operator
 export OPAPI_VERSION=v1alpha1
 
 export SDK_PROJECT_VERSION=3
+
 
 # Operator SDK Config
 
@@ -25,12 +26,12 @@ export OPERATOR_SDK_DL_URL=https://github.com/operator-framework/operator-sdk/re
 
 # Derived variables
 
-export OPERATOR_VERSION=v${VERSION}
 export OPERATOR_IMAGE=${REGISTRY}/${REGISTRY_USER}/${OPERATOR_NAME}:${OPERATOR_VERSION}
 export OPERATOR_BUNDLE=${REGISTRY}/${REGISTRY_USER}/${OPERATOR_NAME}-bundle:${OPERATOR_VERSION}
 
 export ARCH=$(case $(uname -m) in x86_64) echo -n amd64 ;; aarch64) echo -n arm64 ;; *) echo -n $(uname -m) ;; esac)
 export OS=$(uname | awk '{print tolower($0)}')
+
 
 # Runtime and framework config
 
