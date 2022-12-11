@@ -26,4 +26,7 @@
     cd /workspaces/finos-operator/etc
     . ./codespaces-init.sh
     ```
+    You will now have the oc client and operator-sdk available in your terminal, and you will be logged into openshift as an administrator. 
+    
+    Currently OpenShift requires cluster-admin privileges for developing operators. If you don't have access to a cluster as an administrator, you can [install OpenShift locally](https://developers.redhat.com/blog/2019/09/05/red-hat-openshift-4-on-your-laptop-introducing-red-hat-codeready-containers). 
 
