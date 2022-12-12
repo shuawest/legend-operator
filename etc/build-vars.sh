@@ -7,7 +7,7 @@ export OPERATOR_SRC=/workspaces/legend-operator/src
 
 export OPERATOR_VERSION=v0.0.1
 
-export DOMAIN=org.finos.legend
+export DOMAIN=legend.finos.org
 export NAME="finos-legend"
 export GOREPO=github.com/finos/legend-operator
 export OPAPI_VERSION=v1alpha1

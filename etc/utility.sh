@@ -13,20 +13,8 @@ genOperatorInit() {
     pushd ${OPERATOR_SRC}
     
     operator-sdk init --domain ${DOMAIN} --repo ${GOREPO} --project-version=${SDK_PROJECT_VERSION} 
+    operator-sdk create api --version ${OPAPI_VERSION} --kind Legend --resource --controller
     
-    popd
-}
-
-genApis() {
-    checkOperatorSDK
-    pushd ${OPERATOR_SRC}
-
-    operator-sdk create api --version ${OPAPI_VERSION} --kind Studio --resource --controller
-    operator-sdk create api --version ${OPAPI_VERSION} --kind Query --resource --controller
-    operator-sdk create api --version ${OPAPI_VERSION} --kind Engine --resource --controller
-    operator-sdk create api --version ${OPAPI_VERSION} --kind Sdlc --resource --controller
-    operator-sdk create api --version ${OPAPI_VERSION} --kind Store --resource --controller
-
     popd
 }
 
